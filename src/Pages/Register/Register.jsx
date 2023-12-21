@@ -21,18 +21,18 @@ const Register = () => {
             setErrorMassage("Password must be at least 6 characters");
             return;
         }
-        else if (!/^(?=.*[a-z]).*$/.test(password)) {
-            setErrorMassage("Password must have at least one Lowercase Character.");
-            return;
-        }
-        else if (! /^(?=.*[A-Z]).*$/.test(password)) {
-            setErrorMassage("Password must have at least one Uppercase Character.")
-            return;
-        }
-        else if (! /^(?=.*[~`!@#$%^&*()--+={}[\]|\\:;"'<>,.?/_₹]).*$/.test(password)) {
-            setErrorMassage("Password must contain at least one Special Symbol.")
-            return;
-        }
+        // else if (!/^(?=.*[a-z]).*$/.test(password)) {
+        //     setErrorMassage("Password must have at least one Lowercase Character.");
+        //     return;
+        // }
+        // else if (! /^(?=.*[A-Z]).*$/.test(password)) {
+        //     setErrorMassage("Password must have at least one Uppercase Character.")
+        //     return;
+        // }
+        // else if (! /^(?=.*[~`!@#$%^&*()--+={}[\]|\\:;"'<>,.?/_₹]).*$/.test(password)) {
+        //     setErrorMassage("Password must contain at least one Special Symbol.")
+        //     return;
+        // }
         else {
             setErrorMassage('');
         }
@@ -48,7 +48,7 @@ const Register = () => {
                     })
                 console.log(res.user);
                 navigate(location?.state ? location.state : '/')
-                swal("Good job", "Register successful", "success").then(() => {
+                swal("Register", "successful", "success").then(() => {
                     window.location.reload();
 
                 })
@@ -64,11 +64,11 @@ const Register = () => {
         setShowPassword(!showPassword)
     }
     return (
-        <div className="bg-blue-300 mt-2 py-12 md:py-24">
+        <div className="bg-gradient-to-r from-[#5d5ced] to-[#110242] py-12 md:py-24">
             <div>
-                <h1 className="md:text-5xl text-3xl font-bold text-center mb-8">Register Here</h1>
+                <h1 className="md:text-5xl text-3xl font-bold text-center mb-8 text-white">Please Register!</h1>
             </div>
-            <div className="md:flex justify-between items-center">
+            <div className="md:flex justify-between items-center max-w-[1300px] mx-auto">
                 <div className="md:block hidden">
                     <img src="https://cdni.iconscout.com/illustration/premium/thumb/online-sign-up-4489361-3723268.png" alt="" />
                 </div>

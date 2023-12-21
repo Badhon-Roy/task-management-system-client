@@ -44,9 +44,10 @@ const Login = () => {
         setShowPassword(!showPassword)
     }
     return (
-        <div className="bg-purple-300 mt-2 py-12 md:py-24">
+        <div className="bg-gradient-to-r from-[#5d5ced] to-[#110242]">
+        <div className="py-12 md:py-24 max-w-[1300px] mx-auto">
             <div>
-                <h1 className="md:text-5xl text-3xl font-bold text-center mb-8">Login now!</h1>
+                <h1 className="md:text-5xl text-3xl font-bold text-center mb-8 text-white">Login now!</h1>
             </div>
             <div className="md:flex justify-between items-center lg:px-16 md:px-8">
                 <div className="lg:w-2/5 md:w-3/4 mx-auto px-4">
@@ -99,6 +100,7 @@ const Login = () => {
                     <img src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png" alt="" />
                 </div>
             </div>
+        </div>
         </div>
     );
 };

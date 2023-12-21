@@ -1,8 +1,9 @@
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div>
-            <div className="navbar bg-base-100">
+        <div className="bg-gray-300">
+            <div className="navbar max-w-[1300px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,25 +21,22 @@ const Navbar = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl">Task Management</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><NavLink
+                            to="/"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Home
+                        </NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link to="/login" className="btn">Login</Link>
                 </div>
             </div>
         </div>
